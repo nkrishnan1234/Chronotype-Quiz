@@ -1,11 +1,10 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Chronotypes Information</title>
     <link rel="icon" type="image/webp" href="favicon.webp">
     <style>
         :root {
-            /* Using a classic, inviting neutral palette that acts as a gateway to all animals */
             --primary: #6c757d;
             --primary-dark: #495057;
             --dark: #212529;
@@ -58,21 +57,37 @@
         .intro-box p:last-child {
             margin-bottom: 0;
         }
+        /* Grid Layout */
         .chronotype-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 15px;
             margin-bottom: 30px;
         }
+        /* Clickable Link wrapper */
+        .chronotype-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        /* Card Styles and Hover Effects */
         .chronotype-card {
             background-color: var(--card-bg);
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             text-align: center;
             font-weight: bold;
             color: var(--primary-dark);
             border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .chronotype-link:hover .chronotype-card {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+            color: var(--dark);
         }
         .image-container {
             text-align: center;
@@ -102,7 +117,7 @@
             margin-top: 40px;
         }
         button#quiz-btn {
-            background-color: #e63946; /* Accent color to draw immediate action to the quiz */
+            background-color: #e63946;
             color: white;
             border: none;
             padding: 15px 40px;
@@ -127,19 +142,28 @@
         <h3>What is a Chronotype?</h3>
         <div class="intro-box">
             <p>A chronotype is more than just being an “early bird” or a “night owl”. It is your body's natural disposition to feel alert or sleepy based on the time of day and night.</p>
-            <p>It is deeply tied to the internal master clock in your brain: the <strong>circadian rhythm</strong>. The circadian rhythm guides your sleep cycles and core body functions by reacting to daylight exposure.</p>
-            <p>When daylight fades, your body produces melatonin to signal sleepiness. However, genetics cause everyone's rhythms to differ slightly, meaning we don't all produce melatonin at the exact same intervals. These unique variations categorize us into four distinct profiles:</p>
+            <p>It is deeply tied to the internal master clock in your brain: the <strong>circadian rhythm</strong>. The circadian rhythm guides your sleep cycles, hormone production, and core body functions by reacting to daylight exposure.</p>
+            <p>When daylight fades, your body produces melatonin to signal sleepiness. However, genetics cause everyone's rhythms to differ slightly—meaning we don't all produce melatonin at the exact same intervals. These unique variations categorize us into four distinct profiles:</p>
         </div>
 
+        <!-- Clickable Chronotype Cards Links -->
         <div class="chronotype-grid">
-            <div class="chronotype-card">🐺 Wolf</div>
-            <div class="chronotype-card">🐻 Bear</div>
-            <div class="chronotype-card">🐬 Dolphin</div>
-            <div class="chronotype-card">🦁 Lion</div>
+            <a href="wolf.html" class="chronotype-link">
+                <div class="chronotype-card">🐺 Wolf</div>
+            </a>
+            <a href="bear.html" class="chronotype-link">
+                <div class="chronotype-card">🐻 Bear</div>
+            </a>
+            <a href="dolphin.html" class="chronotype-link">
+                <div class="chronotype-card">🐬 Dolphin</div>
+            </a>
+            <a href="lion.html" class="chronotype-link">
+                <div class="chronotype-card">🦁 Lion</div>
+            </a>
         </div>
 
         <div class="image-container">
-            <a href="https://www.hushhome.com/blogs/sleep-wellness-guide/understanding-chronotypes-lion-wolf-bear-dolphin?srsltid=AfmBOoqqRcMnEoG-7Wyp9WYGVnng5B-5uByM3m5dbmIcdlzKhtmtJOOt" target="_blank">
+            <a href="https://hushhome.com" target="_blank">
                 <img id="indexpic" src="HushHomeChronotypePicture.webp" alt="Visit the Website to view chronotype illustrations">
             </a>
             <p class="caption">This infographic explains the core traits of the four chronotypes — credit to HushHome</p>
