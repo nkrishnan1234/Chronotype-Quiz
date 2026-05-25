@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Chronotype Quiz</title>
+        <link rel="stylesheet" href="quizstyle.css">
+        <script src="quizscript.js" defer></script>
+        <link rel="icon" type="image/webp" href="favicon.webp">
+    </head>
+    <body>
+        <h1>Find Your Chronotype!</h1>
+
+            <h2>BE HONEST WITH YOUR ANSWERS! Knowing your real chronotype can help you get more rest every night!</h2>
+
+            <p>Question 1: When do you feel most energetic?</p>
+                <button id="Lion1">Early Morning</button>
+                <button id="Bear1">Midday</button>
+                <button id="Dolphin1">Sporadically throughout the day</button>
+                <button id="Wolf1">Late at Night</button>
+
+            <p>Question 2: When do you feel the urge to go to bed?</p>
+                <button id="Lion2">Early Evening (8-9pm)</button>
+                <button id="Bear2">Night (10-11pm)</button>
+                <button id="Dolphin2">The urge to sleep comes and goes.</button>
+                <button id="Wolf2">Very Late Night (Past 12am)</button>
+
+            <p>Question 3: Do you struggle with insomnia? (have trouble sleeping most nights)</p>
+                <button id="LionWolfBear3">No/I don't know</button>
+                <button id="Dolphin3">Yes</button>
+
+            <p>Question 4: What time do you wake up without an alarm?</p>
+                <button id="Lion4">5am-6am</button>
+                <button id="Bear4">7am-8am</button>
+                <button id="Wolf4">9am-11am</button>
+                <button id="Dolphin4">6:30am-7:30am</button>
+
+            <p>Question 5: Do you enjoy waking up early?</p>
+                <button id="Lion5">Yes! I wake up early naturally.</button>
+                <button id="Bear5">I don't mind it, it's part of my schedule.</button>
+                <button id="Wolf5">I HATE waking up early!</button>
+                <button id="Dolphin5">No matter when I wake up, I don't feel rested.</button>
+
+            <p>Question 6: How do you feel about social plans on a Friday night?</p>
+                <button id="Lion6">Exhausted; I'd rather be in bed by 9pm.</button>
+                <button id="Bear6">Down for it, as long as I'm home by midnight.</button>
+                <button id="Wolf6">Finally alive! Let's stay out late.</button>
+                <button id="Dolphin6">Anxious or restless; I'm often too tired to enjoy it.</button>
+
+            <p>Question 7: ---</p>
+                <button id="Lion7">Exhausted; I'd rather be in bed by 9pm.</button>
+                <button id="Bear7">Down for it, as long as I'm home by midnight.</button>
+                <button id="Wolf7">Finally alive! Let's stay out late.</button>
+                <button id="Dolphin7">Anxious or restless; I'm often too tired to enjoy it.</button>
+
+            <p></p>
+            <button id="reset" onclick="window.location.href='quiz.html'">Reset Quiz</button>
+
+            <button id="submit">Submit</button>
+
+            <button id="home" onclick="window.location.href='index.html'">Back to Info</button>
+            
+            <div id="result-actions" style="margin-top: 20px;">
+            <a href="lion.html" id="btn-Lion" class="result-btn" style="display: none; text-decoration: none;">
+             <button type="button">View Lion Schedule</button>
+            </a>
+  
+            <a href="bear.html" id="btn-Bear" class="result-btn" style="display: none; text-decoration: none;">
+             <button type="button">View Bear Schedule</button>
+            </a>
+  
+            <a href="dolphin.html" id="btn-Dolphin" class="result-btn" style="display: none; text-decoration: none;">
+                <button type="button">View Dolphin Schedule</button>
+            </a>
+  
+            <a href="wolf.html" id="btn-Wolf" class="result-btn" style="display: none; text-decoration: none;">
+                <button type="button">View Wolf Schedule</button>
+            </a>
+            </div>
+    </body>
+</html>

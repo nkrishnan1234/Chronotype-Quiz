@@ -1,0 +1,42 @@
+h1 {
+    color:rgb(1, 1, 86);
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+button {
+    color:darkblue;
+    border:3px;
+    border-color:rgb(108, 108, 255);
+    border-style:double;
+    font-family:'Times New Roman', Times, serif;
+    border-radius:7.5px;
+}
+
+body {
+    border:5px;
+    border-style:double;
+    border-color:rgb(34, 3, 97);
+    background-color:rgb(113, 166, 252);
+    border-spacing:10px;
+    padding:30px;
+}
+
+#bearpic { 
+  display: block;     
+  max-width: 100%; 
+  height: auto;        
+  width: 95%;        
+  margin-right: auto;  
+  margin-left: 0;     
+}
+
+#indexpic {
+    border-radius:15px;
+}
+
+#home {
+    border-style:solid;
+    border-color:darkslateblue;
+    margin:5px;
+}

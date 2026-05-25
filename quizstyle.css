@@ -1,0 +1,44 @@
+body {
+    border:5px;
+    border-style:double;
+    border-color:rgb(34, 3, 97);
+    background-color:rgb(113, 166, 252);
+    border-spacing:10px;
+    padding:30px;
+}
+
+h1 {
+    color:rgb(1, 1, 86);
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+h2 {
+    color:rgb(1, 79, 127);
+    font-size:14pt;
+
+}
+
+button {
+    color:darkblue;
+    border:3px;
+    border-color:rgb(108, 108, 255);
+    border-style:double;
+    font-family:'Times New Roman', Times, serif;
+    border-radius:7.5px;
+}
+
+#home {
+    size:10in;
+    font-size:10pt;
+    background-color:lightblue;
+}
+
+#reset {
+    background-color:lightcoral;
+}
+
+#submit {
+    background-color:lightgreen;
+}
