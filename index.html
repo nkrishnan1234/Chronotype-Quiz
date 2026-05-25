@@ -1,28 +1,153 @@
 <html>
-    <head>
-        <title>Chronotypes Information</title>
-        <link rel="stylesheet" href="indexstyle.css">
-        <link rel="icon" type="image/webp" href="favicon.webp">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Chronotypes Information</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <style>
+        :root {
+            /* Using a classic, inviting neutral palette that acts as a gateway to all animals */
+            --primary: #6c757d;
+            --primary-dark: #495057;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --accent: #e63946;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: var(--dark);
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h3 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .intro-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+        }
+        .intro-box p {
+            margin: 0 0 15px 0;
+        }
+        .intro-box p:last-child {
+            margin-bottom: 0;
+        }
+        .chronotype-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .chronotype-card {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-dark);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .image-container {
+            text-align: center;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        #indexpic {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        #indexpic:hover {
+            transform: scale(1.01);
+        }
+        .caption {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        button#quiz-btn {
+            background-color: #e63946; /* Accent color to draw immediate action to the quiz */
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(230, 57, 70, 0.3);
+            transition: all 0.2s ease;
+        }
+        button#quiz-btn:hover {
+            background-color: #cb2d39;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
         <h1>Chronotype Quiz</h1>
-        <p> What is a Chronotype?
-        A chronotype is more than just “early bird” and “night owl”. It is your natural disposition to feel alert or sleepy based on the time of day & night.
-        It is tied to the internal clock in your brain, the circadian rhythm.
-        The Circadian Rhythm guides sleep and other bodily functions. It runs on light exposure. When daylight fades, melatonin is produced, which makes you feel sleepy.
-        Not everyone's rhythm is the same, though. Some produce less Melatonin than others. These differences are caused by genetic differences, which cause different chronotypes.
-        Chronotypes include:
-        </p>
-        <ul>
-            <li>Wolf</li>
-            <li>Bear</li>
-            <li>Dolphin</li>
-            <li>Lion</li>
-        </ul>
-        <a href="https://www.hushhome.com/blogs/sleep-wellness-guide/understanding-chronotypes-lion-wolf-bear-dolphin?srsltid=AfmBOoqqRcMnEoG-7Wyp9WYGVnng5B-5uByM3m5dbmIcdlzKhtmtJOOt">
-            <img id="indexpic" src="HushHomeChronotypePicture.webp" alt="Visit the Website">
-        </a>
-        <p>This image explains the four chronotypes - credit to HushHome</p>
-        <button onclick="window.location.href='quiz.html'">Find Your Chronotype!</button>
-    </body>
+        <div class="subtitle">Discover your biological sleep schedule and unlock peak productivity.</div>
+
+        <h3>What is a Chronotype?</h3>
+        <div class="intro-box">
+            <p>A chronotype is more than just being an “early bird” or a “night owl”. It is your body's natural disposition to feel alert or sleepy based on the time of day and night.</p>
+            <p>It is deeply tied to the internal master clock in your brain: the <strong>circadian rhythm</strong>. The circadian rhythm guides your sleep cycles, hormone production, and core body functions by reacting to daylight exposure.</p>
+            <p>When daylight fades, your body produces melatonin to signal sleepiness. However, genetics cause everyone's rhythms to differ slightly—meaning we don't all produce melatonin at the exact same intervals. These unique variations categorize us into four distinct profiles:</p>
+        </div>
+
+        <div class="chronotype-grid">
+            <div class="chronotype-card">🐺 Wolf</div>
+            <div class="chronotype-card">🐻 Bear</div>
+            <div class="chronotype-card">🐬 Dolphin</div>
+            <div class="chronotype-card">🦁 Lion</div>
+        </div>
+
+        <div class="image-container">
+            <a href="https://www.hushhome.com/blogs/sleep-wellness-guide/understanding-chronotypes-lion-wolf-bear-dolphin?srsltid=AfmBOoqqRcMnEoG-7Wyp9WYGVnng5B-5uByM3m5dbmIcdlzKhtmtJOOt" target="_blank">
+                <img id="indexpic" src="HushHomeChronotypePicture.webp" alt="Visit the Website to view chronotype illustrations">
+            </a>
+            <p class="caption">This infographic explains the core traits of the four chronotypes — credit to HushHome</p>
+        </div>
+
+        <div class="btn-container">
+            <button id="quiz-btn" onclick="window.location.href='quiz.html'">Find Your Chronotype!</button>
+        </div>
+    </div>
+</body>
 </html>
