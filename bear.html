@@ -1,20 +1,162 @@
-<html>
-    <head>
-        <title>Your Chronotype Is: Bear</title>
-        <link rel="stylesheet" href="indexstyle.css">
-        <link rel="icon" type="image/jpeg" href="faviconbear.jpeg">
-    </head>
-    <body>
-        <h1>
-            You Are A Bear!
-        </h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Chronotype Is: Bear</title>
+    <link rel="icon" type="image/jpeg" href="faviconbear.jpeg">
+    <style>
+        :root {
+            --primary: #a3b19b;
+            --primary-dark: #6b7a63;
+            --dark: #2b2d42;
+            --light: #f4f7f6;
+            --accent: #e63946;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h3 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .profile-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+        }
+        .profile-box ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .profile-box li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+        .schedule-item {
+            background-color: var(--card-bg);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .time {
+            font-weight: bold;
+            color: var(--primary-dark);
+            min-width: 160px;
+            flex-shrink: 0;
+        }
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .tip-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        button#home {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        button#home:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>You Are A Bear!</h1>
         <h2>This page will tell you everything you need to know about fixing your sleep schedule as a bear.</h2>
-        <p>Bears are suited to the 9-5 schedule. You probably don't need to change your schedule much, but optimizing it can give you an edge over other bears in productivity and health!
-            As a bear, you might feel a little bit tired during the late afternoon, maybe around 3pm. Rest around that time can help you work better during the evening. You don't need to take an hour out of your day just to nap. Even 10 minutes of closing your eyes can be enough.
-        </p>
-        <a href="https://sleepdoctor.com/pages/chronotypes/bear-chronotype?srsltid=AfmBOorZGf8AW5rWRWJOJGDnYCM9wXHsgc7xWAc-hMCOfj0gbEVGVGq9">
-            <img src="Bearinfo.webp" alt="Visit the Website" id="bearpic">
-        </a>
-        <button id="home" onclick="window.location.href='index.html'">Back to Info</button>
-    </body>
-</html>
+
+        <h3>The Bear Profile</h3>
+        <div class="profile-box">
+            <ul>
+                <li><strong>Solar Rhythm:</strong> Your internal clock matches the sunrise and sunset naturally.</li>
+                <li><strong>Your Energy Peak:</strong> Deep focus hits best during mid-morning (10 AM to 12 PM).</li>
+                <li><strong>The Slump:</strong> A major dip in alertness happens right after lunch around 2 PM.</li>
+                <li><strong>Your Goal:</strong> Maintain consistent sleep depth and maximize morning productivity.</li>
+            </ul>
+        </div>
+
+        <h3>The Ideal Daily Schedule</h3>
+        <ul class="schedule-list">
+            <li class="schedule-item"><span class="time">07:00 AM – 07:30 AM</span> <span>Wake up, stretch, and drink water.</span></li>
+            <li class="schedule-item"><span class="time">07:30 AM – 09:00 AM</span> <span>Get outdoor sunlight and eat breakfast.</span></li>
+            <li class="schedule-item"><span class="time">10:00 AM – 12:00 PM</span> <span>Tackle complex, high-priority creative tasks.</span></li>
+            <li class="schedule-item"><span class="time">12:30 PM – 01:30 PM</span> <span>Eat a balanced lunch to lower the risk of afternoon fatigue.</span></li>
+            <li class="schedule-item"><span class="time">02:00 PM – 04:00 PM</span> <span>Focus on administrative work, emails, or easy tasks.</span></li>
+            <li class="schedule-item"><span class="time">04:00 PM – 05:00 PM</span> <span>Take a quick screen break or a short active walk.</span></li>
+            <li class="schedule-item"><span class="time">06:30 PM – 08:00 PM</span> <span>Enjoy dinner around this time.</span></li>
+            <li class="schedule-item"><span class="time">10:00 PM – 11:00 PM</span> <span>Shut off electronics and get ready for bed.</span></li>
+        </ul>
+
+        <h3>Sleep Schedule Fixes</h3>
+        <div class="tip-grid">
+            <div class="tip-card">
+                <strong>Midday Activity</strong>
+                <p>Walk outside for 15 minutes at noon to shake off the afternoon crash.</p>
+            </div>
+            <div class="tip-card">
+                <strong>Protect the Window</strong>
+                <p>Stick to a strict weekend sleep schedule to avoid "social jetlag."</p>
+            </div>
+            <div class="tip-card">
+                <strong>Consistent Caffeine</strong>
+                <p>Delay your first coffee until 10 AM to maximize natural cortisol flow.</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button id="home" onclick="window.location.href='index.html'">Back to Info</button>
+        </div>
+    </div>
+</body>
