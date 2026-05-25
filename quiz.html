@@ -74,12 +74,15 @@
             background-color: #e9ecef;
             border-color: var(--primary);
         }
+        
+        /* THE HIGHLIGHT STATE: This colors the active answer instantly */
         .quiz-option.selected {
-            background-color: var(--primary-dark);
-            color: white;
-            border-color: var(--primary-dark);
+            background-color: #e63946 !important; /* Uses the dynamic vibrant accent color */
+            color: #ffffff !important;           /* Switches text to white for high contrast visibility */
+            border-color: #cb2d39 !important;    /* Tightens the container border footprint */
             font-weight: bold;
         }
+
         .btn-container {
             text-align: center;
             margin-top: 40px;
