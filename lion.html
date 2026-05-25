@@ -1,14 +1,187 @@
-<html>
-    <head>
-        <title>Your Chronotype Is: Lion</title>
-        <link rel="stylesheet" href="indexstyle.css">
-        <link rel="icon" type="image/jpeg" href="faviconlion.jpeg">
-    </head>
-    <body>
-        <h1>
-            You Are A Lion!
-        </h1>
-        <h2>This page will tell you everything you need to know about fixing your sleep schedule as a lion.</h2>
-        <button id="home" onclick="window.location.href='index.html'">Back to Info</button>
-    </body>
+<head> 
+    <meta charset="UTF-8">
+    <title>Your Chronotype Is: Lion</title> 
+    <link rel="icon" type="image/jpeg" href="faviconlion.jpeg">
+    <style>
+        :root {
+            --primary: #d4a373;
+            --primary-dark: #b58253;
+            --dark: #1f2421;
+            --light: #fefae0;
+            --accent: #e63946;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .profile-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .profile-box ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .profile-box li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        }
+
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .schedule-item {
+            background-color: var(--card-bg);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .time {
+            font-weight: bold;
+            color: var(--primary-dark);
+            min-width: 160px;
+            flex-shrink: 0;
+        }
+
+        .tip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .tip-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button#home {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        button#home:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head> 
+<body> 
+    <div class="container">
+        <h1>You Are A Lion!</h1> 
+        <h2>This page will tell you everything you need to know about fixing your sleep schedule as a lion.</h2> 
+
+        <h3>The Lion Profile</h3>
+        <div class="profile-box">
+            <ul>
+                <li><strong>The Trait:</strong> Natural early risers who wake up full of energy.</li>
+                <li><strong>The Peak:</strong> Maximum productivity and focus occur before noon.</li>
+                <li><strong>The Slump:</strong> Energy levels drop drastically in the late afternoon.</li>
+                <li><strong>The Goal:</strong> Push evening exhaustion back to maintain a social life.</li>
+            </ul>
+        </div>
+
+        <h3>The Ideal Daily Schedule</h3>
+        <ul class="schedule-list">
+            <li class="schedule-item"><span class="time">05:30 AM – 06:00 AM</span> <span>Wake up and seek immediate bright light.</span></li>
+            <li class="schedule-item"><span class="time">06:00 AM – 07:00 AM</span> <span>Exercise or do high-intensity movement.</span></li>
+            <li class="schedule-item"><span class="time">07:00 AM – 08:00 AM</span> <span>Eat a high-protein breakfast.</span></li>
+            <li class="schedule-item"><span class="time">08:00 AM – 12:00 PM</span> <span>Tackle analytical, deep-work tasks.</span></li>
+            <li class="schedule-item"><span class="time">12:00 PM – 01:00 PM</span> <span>Take a brisk walk outside for afternoon sun.</span></li>
+            <li class="schedule-item"><span class="time">01:00 PM – 05:00 PM</span> <span>Focus on administrative tasks or meetings.</span></li>
+            <li class="schedule-item"><span class="time">05:00 PM – 06:00 PM</span> <span>Limit heavy carbohydrate intake at dinner.</span></li>
+            <li class="schedule-item"><span class="time">09:30 PM – 10:00 PM</span> <span>Dim all lights and wind down for sleep.</span></li>
+        </ul>
+
+        <h3>Sleep Schedule Fixes</h3>
+        <div class="tip-grid">
+            <div class="tip-card">
+                <strong>Evening Light</strong>
+                <p>Use bright lights at 06:00 PM to trick the brain into staying awake longer.</p>
+            </div>
+            <div class="tip-card">
+                <strong>Late Exercise</strong>
+                <p>Do light cardio at 05:00 PM to boost evening alertness and delay fatigue.</p>
+            </div>
+            <div class="tip-card">
+                <strong>Strategic Naps</strong>
+                <p>Limit power naps to 20 minutes before 03:00 PM to protect nighttime sleep.</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button id="home" onclick="window.location.href='index.html'">Back to Info</button> 
+        </div>
+    </div>
+</body> 
 </html>
