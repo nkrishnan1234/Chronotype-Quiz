@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Chronotype Quiz</title>
@@ -10,7 +10,7 @@
             --primary-dark: #495057;
             --dark: #212529;
             --light: #f8f9fa;
-            --accent: #e63946;
+            --accent: #2e7d32;
             --card-bg: #ffffff;
         }
         body {
@@ -74,12 +74,11 @@
             background-color: #e9ecef;
             border-color: var(--primary);
         }
-        
-        /* THE HIGHLIGHT STATE: This colors the active answer instantly */
+         
         .quiz-option.selected {
-            background-color: #e63946 !important; /* Uses the dynamic vibrant accent color */
-            color: #ffffff !important;           /* Switches text to white for high contrast visibility */
-            border-color: #cb2d39 !important;    /* Tightens the container border footprint */
+            background-color: #2e7d32 !important; /*green bckgrnd*/
+            color: #ffffff !important;           /*white */
+            border-color: #1b5e20 !important;  
             font-weight: bold;
         }
 
@@ -101,12 +100,12 @@
             border: none;
         }
         #submit {
-            background-color:#31B557;
+            background-color: var(--accent);
             color: white;
-            box-shadow: 0 4px 10px rgba(0, 142, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3); /* green glow thingy */
         }
         #submit:hover {
-            background-color: #31B557;
+            background-color: #1b5e20;
         }
         #reset, #home {
             background-color: var(--primary);
@@ -117,7 +116,7 @@
         }
         .result-box {
             display: none;
-            background: linear-gradient(135deg, #ffffff, #f1f3f5);
+            background: linear-gradient(135deg, #ffffff, #f1f8f1); /*gradient green */
             border: 2px dashed var(--accent);
             padding: 30px;
             border-radius: 12px;
@@ -217,13 +216,13 @@
             </div>
         </div>
 
-        <!-- Dynamic Results Output Box -->
+        <!--Results Output Box -->
         <div id="results-display-panel" class="result-box">
             <h4 id="calculated-title">Your Profile Result Is Ready!</h4>
             <a href="#" id="calculated-link" class="result-link-btn">View Detailed Schedule</a>
         </div>
 
-        <!-- Action Control Center -->
+        <!-- action control -->
         <div class="btn-container">
             <button id="submit" class="action-btn">Submit Quiz</button>
             <button id="reset" class="action-btn" onclick="window.location.reload()">Reset Quiz</button>
