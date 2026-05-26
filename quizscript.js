@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const finalName = winner.charAt(0).toUpperCase() + winner.slice(1);
         
         // Dynamically update and reveal the customized results box
-        calculatedTitle.innerHTML = `Your Matched Chronotype Profile: <strong>${finalName}</strong>`;
+        calculatedTitle.innerHTML = `Your Chronotype: <strong>${finalName}</strong>`;
         calculatedLink.setAttribute('href', `${winner}.html`);
-        calculatedLink.textContent = `Open My ${finalName} Guide`;
+        calculatedLink.textContent = `More ${finalName} Information`;
         
         resultPanel.style.display = 'block';
         resultPanel.scrollIntoView({ behavior: 'smooth' });
